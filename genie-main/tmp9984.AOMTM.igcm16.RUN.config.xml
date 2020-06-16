@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job creator="translate_config.py" date="2020-06-15">
+	<vars>
+		<var name="EXPID">
+			AOMTM.igcm16.RUN
+		</var>
+	</vars>
+	<config>
+		<model name="goldsteinseaice"/>
+		<model name="biogem"/>
+		<model name="atchem"/>
+		<model name="goldstein"/>
+		<model name="plasim"/>
+	</config>
+	<build>
+		<macro handle="GENIENXOPTS" status="defined">
+			<identifier>
+				GENIENX
+			</identifier>
+			<replacement>
+				64
+			</replacement>
+		</macro>
+		<macro handle="GENIENYOPTS" status="defined">
+			<identifier>
+				GENIENY
+			</identifier>
+			<replacement>
+				32
+			</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNLONSOPTS" status="defined">
+			<identifier>
+				GOLDSTEINNLONS
+			</identifier>
+			<replacement>
+				64
+			</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNLATSOPTS" status="defined">
+			<identifier>
+				GOLDSTEINNLATS
+			</identifier>
+			<replacement>
+				32
+			</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNLEVSOPTS" status="defined">
+			<identifier>
+				GOLDSTEINNLEVS
+			</identifier>
+			<replacement>
+				16
+			</replacement>
+		</macro>
+		<macro handle="GOLDSTEINNTRACSOPTS" status="defined">
+			<identifier>
+				GOLDSTEINNTRACS
+			</identifier>
+			<replacement>
+				19
+			</replacement>
+		</macro>
+	</build>
+	<testing/>
+	<parameters>
+		<control>
+			<param name="koverall_total">
+				115200
+			</param>
+			<param name="ksic_loop">
+				16
+			</param>
+			<param name="kocn_loop">
+				16
+			</param>
+			<param name="klnd_loop">
+				16
+			</param>
+			<param name="conv_kocn_katchem">
+				10
+			</param>
+			<param name="conv_kocn_ksedgem">
+				720
+			</param>
+			<param name="conv_kocn_kbiogem">
+				10
+			</param>
+			<param name="conv_kocn_krokgem">
+				10
+			</param>
+			<param name="conv_kocn_kecogem">
+				10
+			</param>
+			<param name="conv_kocn_korb">
+				9999999
+			</param>
+			<param name="kgemlite">
+				720
+			</param>
+			<param name="dt_write">
+				115200
+			</param>
+			<param name="genie_timestep">
+				2739.37500000000000000000
+			</param>
+			<param name="genie_solar_constant">
+				1365.0
+			</param>
+			<param name="fname_topo">
+				igcm16
+			</param>
+			<param name="debug_loop">
+				1
+			</param>
+			<param name="par_grid_lon_offset">
+				-2.8125
+			</param>
+			<paramArray name="ocn_select">
+				<param index="3">
+					.true.
+				</param>
+				<param index="4">
+					.true.
+				</param>
+				<param index="5">
+					.true.
+				</param>
+				<param index="8">
+					.true.
+				</param>
+				<param index="10">
+					.true.
+				</param>
+				<param index="12">
+					.true.
+				</param>
+				<param index="15">
+					.true.
+				</param>
+				<param index="16">
+					.true.
+				</param>
+				<param index="17">
+					.true.
+				</param>
+				<param index="20">
+					.true.
+				</param>
+				<param index="25">
+					.true.
+				</param>
+				<param index="26">
+					.true.
+				</param>
+				<param index="27">
+					.true.
+				</param>
+				<param index="35">
+					.true.
+				</param>
+				<param index="48">
+					.true.
+				</param>
+				<param index="49">
+					.true.
+				</param>
+				<param index="50">
+					.true.
+				</param>
+			</paramArray>
+			<paramArray name="atm_select">
+				<param index="3">
+					.true.
+				</param>
+				<param index="4">
+					.true.
+				</param>
+				<param index="5">
+					.true.
+				</param>
+				<param index="6">
+					.true.
+				</param>
+				<param index="10">
+					.true.
+				</param>
+				<param index="11">
+					.true.
+				</param>
+				<param index="12">
+					.true.
+				</param>
+			</paramArray>
+			<paramArray name="sed_select">
+				<param index="3">
+					.true.
+				</param>
+				<param index="4">
+					.true.
+				</param>
+				<param index="5">
+					.true.
+				</param>
+				<param index="8">
+					.true.
+				</param>
+				<param index="14">
+					.true.
+				</param>
+				<param index="15">
+					.true.
+				</param>
+				<param index="16">
+					.true.
+				</param>
+				<param index="22">
+					.true.
+				</param>
+				<param index="32">
+					.true.
+				</param>
+				<param index="33">
+					.true.
+				</param>
+				<param index="34">
+					.true.
+				</param>
+				<param index="36">
+					.true.
+				</param>
+			</paramArray>
+		</control>
+		<model name="goldsteinseaice">
+			<param name="rstdir_name">
+				<sep/>
+				home
+				<sep/>
+				sulphurtuft
+				<sep/>
+				cgenie_output
+				<sep/>
+				AOMTM.igcm16.SPIN2
+				<sep/>
+				goldsteinseaice
+			</param>
+			<param name="igrid">
+				2
+			</param>
+			<param name="world">
+				igcm16
+			</param>
+			<param name="npstp">
+				7200
+			</param>
+			<param name="iwstp">
+				7200
+			</param>
+			<param name="itstp">
+				7201
+			</param>
+			<param name="ianav">
+				7201
+			</param>
+			<param name="ans">
+				c
+			</param>
+			<param name="yearlen">
+				360
+			</param>
+			<param name="nyear">
+				720
+			</param>
+			<param name="sodaylen">
+				86400
+			</param>
+			<param name="sidaylen">
+				86164
+			</param>
+			<param name="diffsic">
+				15000
+			</param>
+			<param name="scf">
+				1.531013488769531300
+			</param>
+			<param name="lout">
+				rst
+			</param>
+			<param name="netin">
+				n
+			</param>
+			<param name="netout">
+				n
+			</param>
+			<param name="ascout">
+				y
+			</param>
+			<param name="lin">
+				rst.1
+			</param>
+		</model>
+		<model name="embm">
+			<param name="npstp">
+				7200
+			</param>
+			<param name="iwstp">
+				7200
+			</param>
+			<param name="itstp">
+				7201
+			</param>
+			<param name="ianav">
+				7201
+			</param>
+			<param name="ans">
+				c
+			</param>
+			<param name="yearlen">
+				360
+			</param>
+			<param name="nyear">
+				720
+			</param>
+			<param name="lout">
+				rst
+			</param>
+			<param name="netin">
+				n
+			</param>
+			<param name="netout">
+				n
+			</param>
+			<param name="ascout">
+				y
+			</param>
+			<param name="rstdir_name">
+				<sep/>
+				home
+				<sep/>
+				sulphurtuft
+				<sep/>
+				cgenie_output
+				<sep/>
+				AOMTM.igcm16.SPIN2
+				<sep/>
+				embm
+			</param>
+			<param name="lin">
+				rst.1
+			</param>
+		</model>
+		<model name="goldstein">
+			<param name="rstdir_name">
+				<sep/>
+				home
+				<sep/>
+				sulphurtuft
+				<sep/>
+				cgenie_output
+				<sep/>
+				AOMTM.igcm16.SPIN2
+				<sep/>
+				goldstein
+			</param>
+			<param name="igrid">
+				2
+			</param>
+			<param name="world">
+				igcm16
+			</param>
+			<param name="npstp">
+				7200
+			</param>
+			<param name="iwstp">
+				7200
+			</param>
+			<param name="itstp">
+				7201
+			</param>
+			<param name="ianav">
+				7201
+			</param>
+			<param name="ans">
+				c
+			</param>
+			<param name="yearlen">
+				360
+			</param>
+			<param name="nyear">
+				720
+			</param>
+			<param name="sodaylen">
+				86400
+			</param>
+			<param name="sidaylen">
+				86164
+			</param>
+			<param name="temp0">
+				0.0
+			</param>
+			<param name="temp1">
+				0.0
+			</param>
+			<param name="rel">
+				0.9000000
+			</param>
+			<param name="scf">
+				1.531013488769531300
+			</param>
+			<param name="adrag">
+				2.554625913
+			</param>
+			<param name="iediff">
+				1
+			</param>
+			<param name="ediffpow1">
+				1.077402066
+			</param>
+			<param name="ieos">
+				1
+			</param>
+			<param name="tdatafile">
+				igcm16_tempann.silo
+			</param>
+			<param name="sdatafile">
+				igcm16_saliann.silo
+			</param>
+			<param name="lout">
+				rst
+			</param>
+			<param name="netin">
+				n
+			</param>
+			<param name="netout">
+				n
+			</param>
+			<param name="ascout">
+				y
+			</param>
+			<param name="lin">
+				rst.1
+			</param>
+			<paramArray name="diff">
+				<param index="1">
+					2005.240135
+				</param>
+				<param index="2">
+					0.000135386
+				</param>
+			</paramArray>
+		</model>
+		<model name="atchem">
+			<param name="ctrl_continuing">
+				t
+			</param>
+			<param name="par_rstdir_name">
+				<sep/>
+				home
+				<sep/>
+				sulphurtuft
+				<sep/>
+				cgenie_output
+				<sep/>
+				AOMTM.igcm16.SPIN2
+				<sep/>
+				atchem
+			</param>
+			<param name="ctrl_ncrst">
+				.true.
+			</param>
+			<paramArray name="atm_init">
+				<param index="3">
+					278.0E-06
+				</param>
+				<param index="4">
+					-6.5
+				</param>
+				<param index="6">
+					0.2095
+				</param>
+				<param index="10">
+					7.0E-07
+				</param>
+				<param index="11">
+					-60.0
+				</param>
+			</paramArray>
+		</model>
+		<model name="sedgem">
+			<param name="ctrl_continuing">
+				t
+			</param>
+			<param name="par_misc_t_runtime">
+				10
+			</param>
+			<param name="par_rstdir_name">
+				<sep/>
+				home
+				<sep/>
+				sulphurtuft
+				<sep/>
+				cgenie_output
+				<sep/>
+				AOMTM.igcm16.SPIN2
+				<sep/>
+				sedgem
+			</param>
+			<param name="ctrl_ncrst">
+				.true.
+			</param>
+		</model>
+		<model name="plasim">
+			<param name="psurf">
+				101100.0
+			</param>
+			<param name="nafter">
+				1152000
+			</param>
+			<param name="tdissd">
+				0.012448584
+			</param>
+			<param name="tdissz">
+				0.046267461
+			</param>
+			<param name="tdisst">
+				1.03201731
+			</param>
+			<param name="tdissq">
+				0.061880547
+			</param>
+			<param name="solar_day">
+				86400.0
+			</param>
+			<param name="siderial_day">
+				86164.0
+			</param>
+			<param name="indir_name">
+				..
+				<sep/>
+				..
+				<sep/>
+				cgenie.muffin
+				<sep/>
+				genie-plasim
+				<sep/>
+				data
+				<sep/>
+				input
+				<sep/>
+				T21_IGCM16
+			</param>
+			<param name="scale_apm">
+				0
+			</param>
+			<param name="ngear">
+				1
+			</param>
+			<param name="ngear_multiple">
+				10
+			</param>
+			<param name="nout3D">
+				0
+			</param>
+			<param name="noutseas">
+				0
+			</param>
+			<param name="noutmnth">
+				0
+			</param>
+			<param name="vdiff_lamm">
+				12.95755067
+			</param>
+			<param name="atchem_radfor">
+				.TRUE.
+			</param>
+			<param name="tswr1">
+				0.324030081
+			</param>
+			<param name="tswr2">
+				0.032974609
+			</param>
+			<param name="acllwr">
+				0.501520425
+			</param>
+			<param name="th2oc">
+				0.023572382
+			</param>
+			<param name="gsol0">
+				1365.0
+			</param>
+			<param name="rcritmin">
+				0.948665442
+			</param>
+			<param name="gamma">
+				0.007991045
+			</param>
+			<param name="albseamax">
+				0.449923169
+			</param>
+			<param name="albgmax">
+				0.8
+			</param>
+			<param name="qthresh">
+				0.1
+			</param>
+			<param name="k17">
+				0.842488946
+			</param>
+			<param name="k18">
+				1.204E-07
+			</param>
+			<param name="k26">
+				2.41966E-09
+			</param>
+			<param name="k32">
+				218.3556628
+			</param>
+		</model>
+		<model name="ecogem">
+			<param name="ctrl_continuing">
+				t
+			</param>
+			<param name="par_rstdir_name">
+				<sep/>
+				home
+				<sep/>
+				sulphurtuft
+				<sep/>
+				cgenie_output
+				<sep/>
+				AOMTM.igcm16.SPIN2
+				<sep/>
+				ecogem
+			</param>
+			<param name="ctrl_ncrst">
+				.true.
+			</param>
+		</model>
+		<model name="ents">
+			<param name="outdir_name">
+				<sep/>
+				home
+				<sep/>
+				sulphurtuft
+				<sep/>
+				cgenie_output
+				<sep/>
+				AOMTM.igcm16.RUN
+				<sep/>
+				ents
+			</param>
+			<param name="ents_npstp">
+				7200
+			</param>
+			<param name="ents_iwstp">
+				7200
+			</param>
+			<param name="ents_itstp">
+				7201
+			</param>
+			<param name="ents_ianav">
+				7201
+			</param>
+			<param name="ents_restart">
+				c
+			</param>
+			<param name="ents_yearlen">
+				360
+			</param>
+			<param name="ents_out_name">
+				rst
+			</param>
+			<param name="ents_netin">
+				n
+			</param>
+			<param name="ents_dirnetout">
+				<sep/>
+				home
+				<sep/>
+				sulphurtuft
+				<sep/>
+				cgenie_output
+				<sep/>
+				AOMTM.igcm16.SPIN2
+				<sep/>
+				ents
+			</param>
+			<param name="rstdir_name">
+				<sep/>
+				home
+				<sep/>
+				sulphurtuft
+				<sep/>
+				cgenie_output
+				<sep/>
+				AOMTM.igcm16.SPIN2
+				<sep/>
+				ents
+			</param>
+			<param name="ents_restart_file">
+				rst.sland
+			</param>
+		</model>
+		<model name="biogem">
+			<param name="ctrl_continuing">
+				t
+			</param>
+			<param name="par_misc_t_runtime">
+				10
+			</param>
+			<param name="ctrl_force_windspeed">
+				.FALSE.
+			</param>
+			<param name="ctrl_force_oldformat">
+				.false.
+			</param>
+			<param name="par_forcing_name">
+				pyyyyz.AGE
+			</param>
+			<param name="par_bio_prodopt">
+				NONE
+			</param>
+			<param name="par_rstdir_name">
+				<sep/>
+				home
+				<sep/>
+				sulphurtuft
+				<sep/>
+				cgenie_output
+				<sep/>
+				AOMTM.igcm16.SPIN2
+				<sep/>
+				biogem
+			</param>
+			<param name="ctrl_data_save_slice_bio">
+				.false.
+			</param>
+			<param name="par_data_save_level">
+				7
+			</param>
+			<param name="ctrl_ncrst">
+				.true.
+			</param>
+			<param name="n_orb_pts_nmax">
+				10000
+			</param>
+			<param name="ctrl_debug_lvl0">
+				.true.
+			</param>
+			<param name="ctrl_force_ocn_age">
+				.true.
+			</param>
+			<paramArray name="ocn_init">
+				<param index="3">
+					2.244E-03
+				</param>
+				<param index="4">
+					0.4
+				</param>
+				<param index="8">
+					2.159E-06
+				</param>
+				<param index="10">
+					1.696E-04
+				</param>
+				<param index="12">
+					2.363E-03
+				</param>
+				<param index="35">
+					10.0E-03
+				</param>
+				<param index="48">
+					0.0
+				</param>
+				<param index="49">
+					0.0
+				</param>
+				<param index="50">
+					5.282E-02
+				</param>
+			</paramArray>
+			<paramArray name="par_atm_force_scale_val">
+				<param index="3">
+					280.0E-6
+				</param>
+				<param index="4">
+					-6.5
+				</param>
+				<param index="5">
+					38.4
+				</param>
+				<param index="10">
+					7.0E-7
+				</param>
+				<param index="11">
+					-60
+				</param>
+				<param index="12">
+					0
+				</param>
+			</paramArray>
+		</model>
+		<model name="rokgem">
+			<param name="ctrl_continuing">
+				t
+			</param>
+			<param name="par_rstdir_name">
+				<sep/>
+				home
+				<sep/>
+				sulphurtuft
+				<sep/>
+				cgenie_output
+				<sep/>
+				AOMTM.igcm16.SPIN2
+				<sep/>
+				rokgem
+			</param>
+		</model>
+	</parameters>
+</job>
+
