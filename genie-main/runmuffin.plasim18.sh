@@ -204,7 +204,7 @@ echo "   Setting time-stepping [GOLDSTEIN, BIOGEM:GOLDSTEIN]: " $N_TIMESTEPS $db
 # define primary model time step
 # c-goldstein; e.g. ma_genie_timestep = 365.25*24.0/(16*720) * 3600.0 (GOLDSTEIN year length)
 #                => ma_genie_timestep=2739.375
-dstp="$(echo "3600.0*18.0*365.25/$datmstp/$N_TIMESTEPS" | bc -l)"
+dstp="$(echo "3600.0*18.0*480.0/$datmstp/$N_TIMESTEPS" | bc -l)"
 echo "   Setting primary model time step: " $dstp
 # write primary model time step
 echo ma_genie_timestep=$dstp >> $CONFIGPATH/$CONFIGNAME
