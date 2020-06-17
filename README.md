@@ -4,7 +4,7 @@
 2. [genie-forcings](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/genie-forcings) contains the forcing file required in the user-configs.
 3. The main genie modules (goldstein, goldsteinseaice, plasim and everything else in main) are copied in whole.
 4. Original files have a '_1' after their file names.
-## Parameterize day length in cGENIE
+## Parameterize day length
 ### In genie-main
 In definition.xml, defined solar and siderial day lengths for goldstein, goldsteinseaice and plasim (no idea why they weren't defined but they still appeared in plasim files).
 ```
