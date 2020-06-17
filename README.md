@@ -110,3 +110,4 @@ else if (mod(kstep,(ngear_years_plasim*n_days_per_year*nint(solar_day)/60/mpstep
 ```
 Replacement is also done with radmod.f90.
 ## Debugging
+In [cgenie_log](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/cgenie_log), you can find the most recent run log 
