@@ -109,5 +109,6 @@ else if (mod(kstep,(ngear_years_plasim*n_days_per_year*nint(solar_day)/60/mpstep
       if (mod(nstep+1-(n_days_per_year*nint(solar_day)/60/mpstep),nafter) == 0) then
 ```
 Replacement is also done with radmod.f90.
-## Debugging
-In [cgenie_log](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/cgenie_log), you can find the most recent run log 
+## Debug note
+In [cgenie_log](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/cgenie_log), you can find the most recent run log. I ran it using runmuffin.plasim.sh, because the primary model timestep (ma_genie_timestep) shouldn't be affected by different day length, since year length changes with day length, and the timestep is dependent on their product. 
+So far, without gearing, PLASIM is able to reset coupling variable and BIOGEM is able to save data at the end of each year. With gearing, the model crashes much faster. We should try to let it run properly without gearing first, then turn on gearing and fix any issues that come along, since cGENIE takes at least 5000 yrs to stabilize.
