@@ -37,6 +37,13 @@ In definition.xml, defined solar and siderial day lengths for goldstein, goldste
     <description> length of sidereal day </description>
 </param>
 ```
+New runmuffin.sh files are made for each new day length, e.g., in runmuffin.plasim18.sh:
+```
+# define primary model time step
+# c-goldstein; e.g. ma_genie_timestep = 365.25*24.0/(16*720) * 3600.0 (GOLDSTEIN year length)
+#                => ma_genie_timestep=2739.375
+dstp="$(echo "3600.0*18.0*480.0/$datmstp/$N_TIMESTEPS" | bc -l)"
+```
 ### In genie-goldstein and genie-goldsteinseaice
 In initialise_goldstein.F and initialise_seaice.F, sodaylen or sidaylen are defined again to finish parameterization, which then replace hard-coded day length:
 ```
@@ -102,3 +109,4 @@ else if (mod(kstep,(ngear_years_plasim*n_days_per_year*nint(solar_day)/60/mpstep
       if (mod(nstep+1-(n_days_per_year*nint(solar_day)/60/mpstep),nafter) == 0) then
 ```
 Replacement is also done with radmod.f90.
+## Debugging
