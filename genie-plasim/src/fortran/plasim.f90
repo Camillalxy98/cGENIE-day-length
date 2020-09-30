@@ -52,7 +52,7 @@
 
 
 ! derive local variables from GENIE global variables
-      mpstep = (nint(solar_day)/60*n_days_per_year)/(dum_plngo*dum_gonyear)
+      mpstep = ((nint(solar_day)/60)*n_days_per_year)/(dum_plngo*dum_gonyear)
       genie_co2=atchem_co2*1.0e6
 
 !     ************************************************************
@@ -580,7 +580,7 @@
 !PBH
 !to follow the plasim convention that 1st timestep = 1 year (don't
 !really understand why has been set up this way...) 
-      nstep=kstep+(n_days_per_year*nint(solar_day)/60/mpstep)-1
+      nstep=kstep+(n_days_per_year*(nint(solar_day)/60)/mpstep)-1
 
 !********************************************************************
 !********************************************************************
@@ -603,12 +603,12 @@
 !PLASIM-GOLDSTEIN GEARING
       gearing_status=0
       if(ngear.eq.1) then
-        gearing_status=mod(int(kstep/(ngear_years_plasim*n_days_per_year*nint(solar_day)/60/mpstep)),ngear_multiple)
+        gearing_status=mod(int(kstep/(ngear_years_plasim*n_days_per_year*(nint(solar_day)/60)/mpstep)),ngear_multiple)
         k=ndayofyear(kstep)
       endif
 
       if(gearing_status.gt.0) then
-        divisor=float(ngear_years_plasim*nint(solar_day)/60)/float(mpstep)
+        divisor=float(ngear_years_plasim*(nint(solar_day)/60))/float(mpstep)
 
         latent_coeff_plas(:,:)=g_latent_coeff_plas(:,:,k)/divisor
         sensible_coeff_plas(:,:)=g_sensible_coeff_plas(:,:,k)/divisor
@@ -651,7 +651,7 @@
         endwhere
         return
 
-      else if (mod(kstep,(ngear_years_plasim*n_days_per_year*nint(solar_day)/60/mpstep)).eq.1) then
+      else if (mod(kstep,(ngear_years_plasim*n_days_per_year*(nint(solar_day)/60)/mpstep)).eq.1) then
         print*,"resetting coupling variables"
         g_latent_coeff_plas(:,:,:)=0.0
         g_sensible_coeff_plas(:,:,:)=0.0
@@ -705,7 +705,7 @@
       call spectrald
 !changed to end 31/12 for consistency with GENIE annual outputs
 !also need to subtract 1 year because plasim starts at 11520
-      if (mod(nstep+1-(n_days_per_year*nint(solar_day)/60/mpstep),nafter) == 0) then
+      if (mod(nstep+1-(n_days_per_year*(nint(solar_day)/60)/mpstep),nafter) == 0) then
         call outaccu
         if(noutput > 0) then
           call outgp
@@ -1168,7 +1168,7 @@
       implicit none
 
       namelist /inp/ ncoeff  , ndel                                     &
-                   , nexp    , nexper  , nkits   , nrestart, noutput    &
+                   , nexp    , nexper  , nkits   , nrestart             &
                    , nstep   , ndebug  , ntspd   , neqsig  , nqspec     &
                    , nprint  , nprhor  , npacksp , npackgp              &
                    , sellon                                             &
@@ -1207,7 +1207,7 @@
                  atchem_couple
 
       namelist /plasim_output_switches/                              &
-                nout3D,noutseas,noutmnth
+                noutput,nout3D,noutseas,noutmnth
 
 !
 !     preset namelist parameter according to model set up
