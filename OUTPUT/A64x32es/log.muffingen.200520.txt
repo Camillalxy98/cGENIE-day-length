@@ -1,0 +1,654 @@
+ 
+------------------------------------------------------------
+   Hello! Welcome to muffingen v0.87
+   We are going to make a GREAT model configuration!
+------------------------------------------------------------
+ 
+>   1. CHECKING PRIMARY OPTIONS ...
+       * GENIE grid will be loaded directly from k1, mask, or k2 text file: epcs6432
+>   2. CREATING GENIE GRID ...
+       - GENIE grid generated.
+>   3. READING AXES INFORMATION ...
+         (Nothing to load.)
+>   4. READING MASK & TOPO GRIDS ...
+       - k1 read.
+       - GENIE grid re-generated.
+>   5. RE-GRIDING MASK ...
+         (Nothing to do ... k1/mask/k2 file already loaded.)
+>   6. FILTERING MASK ...
+       * found 1 water masses
+       - Small water bodies cleaned up.
+       * Revised land area fraction = 0.15283
+>   7. USER EDITING OF MASK ...
+       * Mask alteration procedure :
+         (1) left button to turn grid cell to ocean
+         (2) right button to turn grid cell to land
+         (3) middle button, or clickoutside the grid, to finish
+         -> Cell at (21, 26) now ocean
+         -> Cell at (19, 26) now ocean
+         -> Cell at (19, 27) now ocean
+       - Out of grid range
+       * Mask alteration complete
+       * Revised land area fraction = 0.15137
+       - User-editing complete.
+>   8. CREATE FINAL MASK ...
+       - .mask_out.FINAL.dat saved
+       * Final land area fraction   = 0.15137
+>   9. RE-GRIDING TOPOGRAPHY ...
+         (Nothing to re-grid -- convert k1 file data.)
+>   10. RE-GRIDING OCEAN BATHYMETRY ...
+         (Nothing to re-grid as k1 file already loaded.)
+>  12. USER EDITING OF TOPO ...
+       * Topography alteration procedure :
+         (1) left button to deepen grid cell
+         (2) right button to shallow grid cell
+         (3) middle button, or clickoutside the grid, to finish
+         -> Deepening cell at (21, 26) to k=15
+         -> Deepening cell at (19, 26) to k=15
+         -> Deepening cell at (19, 27) to k=15
+         -> Deepening cell at (37, 32) to k=1
+         -> Deepening cell at (37, 31) to k=1
+         -> Deepening cell at (37, 30) to k=1
+         -> Deepening cell at (36, 31) to k=1
+         -> Deepening cell at (36, 32) to k=1
+         -> Deepening cell at (35, 32) to k=1
+         -> Deepening cell at (34, 32) to k=1
+         -> Deepening cell at (33, 32) to k=1
+         -> Deepening cell at (32, 32) to k=1
+         -> Deepening cell at (31, 32) to k=1
+         -> Deepening cell at (29, 32) to k=1
+         -> Deepening cell at (30, 32) to k=1
+         -> Deepening cell at (28, 32) to k=1
+         -> Shallowing cell at (28, 32) to k=2
+         -> Shallowing cell at (29, 31) to k=3
+         -> Deepening cell at (29, 31) to k=2
+         -> Deepening cell at (29, 31) to k=1
+         -> Deepening cell at (30, 31) to k=1
+         -> Deepening cell at (31, 31) to k=1
+         -> Deepening cell at (32, 31) to k=1
+         -> Deepening cell at (33, 31) to k=1
+         -> Deepening cell at (34, 31) to k=1
+         -> Deepening cell at (35, 31) to k=1
+         -> Deepening cell at (36, 30) to k=1
+         -> Deepening cell at (35, 30) to k=1
+         -> Deepening cell at (34, 30) to k=1
+         -> Deepening cell at (33, 30) to k=1
+         -> Deepening cell at (32, 30) to k=1
+         -> Deepening cell at (31, 30) to k=1
+         -> Deepening cell at (30, 30) to k=1
+         -> Deepening cell at (29, 30) to k=1
+         -> Deepening cell at (28, 30) to k=1
+         -> Deepening cell at (37, 29) to k=1
+         -> Deepening cell at (37, 28) to k=1
+         -> Deepening cell at (37, 27) to k=1
+         -> Deepening cell at (37, 26) to k=1
+         -> Deepening cell at (37, 25) to k=1
+         -> Deepening cell at (37, 24) to k=1
+         -> Deepening cell at (37, 23) to k=1
+         -> Deepening cell at (37, 21) to k=1
+         -> Deepening cell at (37, 22) to k=1
+         -> Deepening cell at (36, 22) to k=1
+         -> Deepening cell at (36, 23) to k=1
+         -> Deepening cell at (36, 24) to k=1
+         -> Deepening cell at (36, 25) to k=1
+         -> Deepening cell at (36, 26) to k=1
+         -> Deepening cell at (36, 28) to k=1
+         -> Deepening cell at (36, 29) to k=1
+         -> Deepening cell at (35, 29) to k=1
+         -> Deepening cell at (35, 27) to k=1
+         -> Deepening cell at (36, 27) to k=1
+         -> Deepening cell at (35, 28) to k=1
+         -> Deepening cell at (34, 29) to k=1
+         -> Deepening cell at (34, 28) to k=1
+         -> Deepening cell at (33, 29) to k=1
+         -> Deepening cell at (31, 29) to k=1
+       - Cannot deepen/shallow cell at (31, 29)
+         -> Deepening cell at (32, 29) to k=1
+       - Cannot deepen/shallow cell at (34, 28)
+         -> Deepening cell at (34, 27) to k=1
+         -> Deepening cell at (33, 27) to k=1
+         -> Deepening cell at (33, 28) to k=1
+         -> Deepening cell at (31, 28) to k=1
+         -> Deepening cell at (32, 28) to k=1
+         -> Deepening cell at (30, 29) to k=1
+         -> Deepening cell at (32, 27) to k=1
+         -> Deepening cell at (33, 26) to k=1
+         -> Deepening cell at (34, 26) to k=1
+         -> Deepening cell at (35, 26) to k=1
+         -> Deepening cell at (35, 25) to k=1
+         -> Deepening cell at (34, 25) to k=1
+         -> Deepening cell at (33, 25) to k=1
+         -> Deepening cell at (34, 24) to k=1
+         -> Deepening cell at (35, 24) to k=1
+         -> Deepening cell at (35, 23) to k=1
+         -> Deepening cell at (35, 22) to k=1
+         -> Deepening cell at (35, 21) to k=1
+         -> Deepening cell at (36, 21) to k=1
+         -> Deepening cell at (35, 20) to k=1
+         -> Deepening cell at (36, 20) to k=1
+         -> Deepening cell at (37, 20) to k=1
+         -> Deepening cell at (37, 19) to k=1
+         -> Deepening cell at (37, 16) to k=1
+         -> Deepening cell at (13, 27) to k=1
+         -> Deepening cell at (13, 28) to k=1
+         -> Deepening cell at (14, 28) to k=1
+         -> Deepening cell at (15, 29) to k=1
+         -> Deepening cell at (14, 29) to k=1
+         -> Deepening cell at (14, 30) to k=1
+         -> Deepening cell at (15, 31) to k=1
+         -> Deepening cell at (16, 31) to k=1
+         -> Deepening cell at (17, 31) to k=1
+         -> Deepening cell at (18, 31) to k=1
+         -> Deepening cell at (13, 31) to k=1
+         -> Deepening cell at (12, 31) to k=1
+         -> Deepening cell at (12, 32) to k=1
+         -> Deepening cell at (12, 30) to k=1
+         -> Deepening cell at (13, 30) to k=1
+         -> Deepening cell at (14, 31) to k=1
+         -> Shallowing cell at (15, 29) to k=2
+         -> Deepening cell at (13, 29) to k=1
+         -> Shallowing cell at (14, 28) to k=2
+         -> Deepening cell at (12, 28) to k=1
+         -> Deepening cell at (13, 25) to k=1
+         -> Deepening cell at (12, 24) to k=1
+         -> Shallowing cell at (13, 26) to k=3
+         -> Shallowing cell at (13, 26) to k=4
+         -> Deepening cell at (13, 26) to k=3
+         -> Deepening cell at (13, 26) to k=2
+       - Cannot deepen/shallow cell at (13, 25)
+         -> Shallowing cell at (13, 25) to k=2
+         -> Deepening cell at (12, 25) to k=1
+         -> Deepening cell at (12, 26) to k=1
+         -> Deepening cell at (12, 27) to k=1
+       - Cannot deepen/shallow cell at (12, 28)
+         -> Deepening cell at (12, 23) to k=1
+         -> Deepening cell at (12, 29) to k=1
+         -> Deepening cell at (11, 29) to k=1
+         -> Deepening cell at (11, 30) to k=1
+         -> Deepening cell at (11, 31) to k=1
+         -> Deepening cell at (10, 31) to k=1
+         -> Deepening cell at (9, 31) to k=1
+         -> Deepening cell at (8, 31) to k=1
+         -> Deepening cell at (8, 32) to k=1
+         -> Deepening cell at (9, 32) to k=1
+         -> Deepening cell at (10, 32) to k=1
+         -> Deepening cell at (11, 32) to k=1
+         -> Deepening cell at (6, 32) to k=1
+         -> Deepening cell at (7, 32) to k=1
+         -> Deepening cell at (5, 32) to k=1
+         -> Deepening cell at (4, 32) to k=1
+         -> Deepening cell at (1, 32) to k=1
+         -> Deepening cell at (2, 32) to k=1
+         -> Deepening cell at (3, 32) to k=1
+         -> Deepening cell at (3, 31) to k=1
+         -> Deepening cell at (2, 31) to k=1
+         -> Deepening cell at (1, 31) to k=1
+         -> Deepening cell at (1, 30) to k=1
+         -> Deepening cell at (2, 30) to k=1
+         -> Deepening cell at (3, 30) to k=1
+         -> Deepening cell at (4, 30) to k=1
+         -> Deepening cell at (5, 31) to k=1
+         -> Deepening cell at (6, 31) to k=1
+       - Cannot deepen/shallow cell at (6, 31)
+         -> Deepening cell at (7, 30) to k=1
+         -> Deepening cell at (6, 30) to k=1
+         -> Deepening cell at (5, 30) to k=1
+         -> Deepening cell at (4, 31) to k=1
+         -> Deepening cell at (7, 31) to k=1
+         -> Deepening cell at (8, 30) to k=1
+         -> Deepening cell at (9, 30) to k=1
+         -> Deepening cell at (10, 30) to k=1
+         -> Deepening cell at (10, 29) to k=1
+         -> Deepening cell at (10, 28) to k=1
+         -> Deepening cell at (11, 27) to k=1
+         -> Deepening cell at (11, 28) to k=1
+         -> Deepening cell at (10, 27) to k=1
+         -> Deepening cell at (9, 27) to k=1
+         -> Deepening cell at (9, 28) to k=1
+         -> Deepening cell at (27, 23) to k=1
+         -> Deepening cell at (27, 22) to k=1
+         -> Deepening cell at (27, 21) to k=1
+         -> Deepening cell at (26, 21) to k=1
+         -> Deepening cell at (26, 20) to k=1
+         -> Deepening cell at (26, 19) to k=1
+         -> Deepening cell at (26, 18) to k=1
+         -> Deepening cell at (25, 18) to k=1
+         -> Deepening cell at (25, 19) to k=1
+         -> Deepening cell at (25, 20) to k=1
+         -> Deepening cell at (25, 21) to k=1
+         -> Deepening cell at (24, 20) to k=1
+         -> Deepening cell at (24, 19) to k=1
+         -> Deepening cell at (24, 18) to k=1
+         -> Deepening cell at (24, 17) to k=1
+         -> Deepening cell at (25, 17) to k=1
+         -> Deepening cell at (25, 16) to k=1
+         -> Deepening cell at (26, 17) to k=1
+         -> Deepening cell at (27, 19) to k=1
+         -> Deepening cell at (27, 20) to k=1
+         -> Deepening cell at (27, 18) to k=1
+         -> Deepening cell at (28, 20) to k=1
+         -> Deepening cell at (29, 20) to k=1
+         -> Deepening cell at (30, 20) to k=1
+         -> Deepening cell at (31, 20) to k=1
+         -> Deepening cell at (32, 20) to k=1
+         -> Deepening cell at (33, 20) to k=1
+         -> Deepening cell at (34, 20) to k=1
+         -> Shallowing cell at (31, 20) to k=2
+         -> Deepening cell at (30, 19) to k=1
+       - Cannot deepen/shallow cell at (30, 19)
+         -> Shallowing cell at (30, 19) to k=2
+         -> Deepening cell at (31, 19) to k=1
+         -> Deepening cell at (31, 18) to k=1
+         -> Deepening cell at (31, 17) to k=1
+         -> Deepening cell at (31, 16) to k=1
+         -> Deepening cell at (31, 15) to k=1
+         -> Deepening cell at (32, 15) to k=1
+         -> Deepening cell at (32, 16) to k=1
+         -> Deepening cell at (32, 17) to k=1
+         -> Deepening cell at (32, 18) to k=1
+         -> Deepening cell at (32, 19) to k=1
+         -> Deepening cell at (33, 19) to k=1
+       - Cannot deepen/shallow cell at (33, 20)
+         -> Deepening cell at (33, 22) to k=1
+         -> Deepening cell at (33, 23) to k=1
+         -> Deepening cell at (34, 23) to k=1
+         -> Deepening cell at (34, 22) to k=1
+         -> Deepening cell at (34, 21) to k=1
+         -> Deepening cell at (33, 21) to k=1
+         -> Deepening cell at (32, 21) to k=1
+         -> Deepening cell at (34, 19) to k=1
+         -> Deepening cell at (35, 19) to k=1
+         -> Deepening cell at (36, 19) to k=1
+         -> Deepening cell at (37, 18) to k=1
+         -> Deepening cell at (37, 17) to k=1
+         -> Deepening cell at (36, 17) to k=1
+         -> Deepening cell at (36, 18) to k=1
+         -> Deepening cell at (35, 18) to k=1
+         -> Deepening cell at (34, 18) to k=1
+       - Cannot deepen/shallow cell at (34, 18)
+         -> Deepening cell at (34, 17) to k=1
+         -> Deepening cell at (35, 17) to k=1
+         -> Deepening cell at (35, 16) to k=1
+         -> Deepening cell at (36, 16) to k=1
+         -> Deepening cell at (37, 15) to k=1
+         -> Deepening cell at (37, 14) to k=1
+         -> Deepening cell at (36, 14) to k=1
+         -> Deepening cell at (35, 14) to k=1
+         -> Deepening cell at (36, 15) to k=1
+         -> Deepening cell at (35, 15) to k=1
+         -> Deepening cell at (34, 15) to k=1
+         -> Deepening cell at (34, 16) to k=1
+         -> Deepening cell at (33, 15) to k=1
+         -> Deepening cell at (33, 14) to k=1
+         -> Deepening cell at (34, 14) to k=1
+         -> Deepening cell at (33, 16) to k=1
+         -> Deepening cell at (33, 17) to k=1
+         -> Deepening cell at (33, 18) to k=1
+         -> Deepening cell at (34, 12) to k=1
+         -> Deepening cell at (35, 13) to k=1
+         -> Deepening cell at (36, 13) to k=1
+         -> Deepening cell at (37, 13) to k=1
+         -> Deepening cell at (37, 12) to k=1
+         -> Deepening cell at (36, 12) to k=1
+         -> Deepening cell at (35, 12) to k=1
+         -> Deepening cell at (35, 11) to k=1
+         -> Deepening cell at (36, 11) to k=1
+         -> Deepening cell at (37, 10) to k=1
+         -> Deepening cell at (37, 11) to k=1
+         -> Deepening cell at (36, 10) to k=1
+         -> Deepening cell at (35, 10) to k=1
+         -> Deepening cell at (34, 10) to k=1
+         -> Deepening cell at (34, 11) to k=1
+         -> Deepening cell at (33, 11) to k=1
+         -> Deepening cell at (33, 10) to k=1
+         -> Deepening cell at (33, 9) to k=1
+       - Cannot deepen/shallow cell at (33, 9)
+         -> Deepening cell at (35, 9) to k=1
+         -> Deepening cell at (36, 9) to k=1
+         -> Deepening cell at (37, 9) to k=1
+         -> Deepening cell at (36, 8) to k=1
+         -> Deepening cell at (37, 6) to k=1
+         -> Deepening cell at (37, 5) to k=1
+         -> Deepening cell at (37, 4) to k=1
+         -> Deepening cell at (37, 3) to k=1
+         -> Deepening cell at (37, 2) to k=1
+         -> Deepening cell at (37, 1) to k=1
+         -> Deepening cell at (36, 1) to k=1
+         -> Deepening cell at (35, 1) to k=1
+         -> Deepening cell at (34, 2) to k=1
+         -> Deepening cell at (35, 2) to k=1
+         -> Deepening cell at (36, 2) to k=1
+         -> Deepening cell at (36, 3) to k=1
+         -> Deepening cell at (35, 3) to k=1
+         -> Deepening cell at (34, 3) to k=1
+         -> Deepening cell at (34, 4) to k=1
+         -> Deepening cell at (35, 4) to k=1
+         -> Deepening cell at (36, 4) to k=1
+         -> Deepening cell at (36, 5) to k=1
+         -> Deepening cell at (36, 6) to k=1
+         -> Deepening cell at (37, 7) to k=1
+         -> Deepening cell at (37, 8) to k=1
+         -> Deepening cell at (36, 7) to k=1
+         -> Deepening cell at (35, 7) to k=1
+         -> Deepening cell at (35, 8) to k=1
+         -> Deepening cell at (34, 8) to k=1
+         -> Deepening cell at (34, 9) to k=1
+         -> Deepening cell at (34, 7) to k=1
+         -> Deepening cell at (34, 6) to k=1
+         -> Deepening cell at (35, 6) to k=1
+         -> Deepening cell at (35, 5) to k=1
+         -> Deepening cell at (34, 5) to k=1
+         -> Deepening cell at (33, 5) to k=1
+         -> Deepening cell at (33, 6) to k=1
+         -> Deepening cell at (33, 8) to k=1
+         -> Deepening cell at (33, 7) to k=1
+         -> Deepening cell at (33, 12) to k=1
+         -> Deepening cell at (33, 13) to k=1
+       - Cannot deepen/shallow cell at (35, 13)
+         -> Deepening cell at (32, 14) to k=1
+         -> Deepening cell at (34, 13) to k=1
+         -> Deepening cell at (12, 22) to k=1
+         -> Deepening cell at (12, 21) to k=1
+         -> Deepening cell at (12, 20) to k=1
+         -> Deepening cell at (12, 19) to k=1
+         -> Deepening cell at (12, 18) to k=1
+         -> Deepening cell at (12, 17) to k=1
+         -> Deepening cell at (12, 16) to k=1
+         -> Deepening cell at (13, 15) to k=1
+         -> Deepening cell at (13, 14) to k=1
+         -> Shallowing cell at (13, 15) to k=2
+         -> Shallowing cell at (13, 14) to k=2
+         -> Deepening cell at (12, 15) to k=1
+         -> Deepening cell at (12, 14) to k=1
+         -> Deepening cell at (12, 13) to k=1
+         -> Deepening cell at (12, 12) to k=1
+         -> Deepening cell at (12, 11) to k=1
+         -> Deepening cell at (12, 10) to k=1
+         -> Deepening cell at (12, 9) to k=1
+         -> Deepening cell at (12, 8) to k=1
+         -> Deepening cell at (12, 7) to k=1
+         -> Deepening cell at (12, 5) to k=1
+         -> Deepening cell at (11, 4) to k=1
+         -> Deepening cell at (11, 3) to k=1
+         -> Deepening cell at (11, 2) to k=1
+         -> Deepening cell at (12, 3) to k=1
+         -> Deepening cell at (12, 6) to k=1
+         -> Deepening cell at (12, 4) to k=1
+         -> Deepening cell at (13, 1) to k=1
+         -> Deepening cell at (12, 1) to k=1
+         -> Deepening cell at (12, 2) to k=1
+         -> Deepening cell at (11, 1) to k=1
+         -> Deepening cell at (10, 2) to k=1
+         -> Deepening cell at (10, 3) to k=1
+         -> Deepening cell at (10, 1) to k=1
+         -> Deepening cell at (10, 4) to k=1
+         -> Deepening cell at (9, 4) to k=1
+         -> Deepening cell at (10, 5) to k=1
+         -> Deepening cell at (11, 5) to k=1
+         -> Deepening cell at (11, 6) to k=1
+         -> Deepening cell at (11, 7) to k=1
+         -> Deepening cell at (11, 8) to k=1
+         -> Deepening cell at (11, 9) to k=1
+         -> Deepening cell at (11, 11) to k=1
+         -> Deepening cell at (11, 10) to k=1
+         -> Deepening cell at (11, 12) to k=1
+         -> Deepening cell at (11, 13) to k=1
+         -> Deepening cell at (11, 14) to k=1
+         -> Deepening cell at (11, 16) to k=1
+         -> Deepening cell at (11, 15) to k=1
+         -> Deepening cell at (11, 17) to k=1
+         -> Deepening cell at (11, 19) to k=1
+         -> Deepening cell at (11, 20) to k=1
+         -> Deepening cell at (11, 21) to k=1
+       - Cannot deepen/shallow cell at (11, 21)
+         -> Deepening cell at (11, 23) to k=1
+         -> Deepening cell at (11, 22) to k=1
+         -> Deepening cell at (11, 24) to k=1
+         -> Deepening cell at (11, 26) to k=1
+         -> Deepening cell at (11, 25) to k=1
+         -> Deepening cell at (10, 26) to k=1
+         -> Deepening cell at (9, 26) to k=1
+         -> Deepening cell at (9, 25) to k=1
+         -> Deepening cell at (10, 25) to k=1
+         -> Deepening cell at (10, 24) to k=1
+         -> Deepening cell at (10, 22) to k=1
+         -> Deepening cell at (10, 21) to k=1
+         -> Deepening cell at (10, 20) to k=1
+         -> Deepening cell at (10, 18) to k=1
+         -> Deepening cell at (11, 18) to k=1
+         -> Deepening cell at (10, 19) to k=1
+         -> Deepening cell at (10, 23) to k=1
+         -> Deepening cell at (9, 23) to k=1
+         -> Deepening cell at (9, 24) to k=1
+       - Cannot deepen/shallow cell at (9, 30)
+         -> Deepening cell at (1, 29) to k=1
+         -> Deepening cell at (2, 29) to k=1
+         -> Deepening cell at (4, 29) to k=1
+         -> Deepening cell at (5, 29) to k=1
+         -> Deepening cell at (6, 29) to k=1
+         -> Deepening cell at (7, 29) to k=1
+         -> Deepening cell at (8, 29) to k=1
+         -> Deepening cell at (9, 29) to k=1
+       - Cannot deepen/shallow cell at (4, 29)
+         -> Deepening cell at (3, 29) to k=1
+       - Cannot deepen/shallow cell at (9, 25)
+         -> Deepening cell at (8, 24) to k=1
+         -> Deepening cell at (8, 25) to k=1
+         -> Deepening cell at (8, 26) to k=1
+         -> Deepening cell at (8, 27) to k=1
+         -> Deepening cell at (8, 28) to k=1
+         -> Deepening cell at (7, 28) to k=1
+         -> Deepening cell at (7, 27) to k=1
+         -> Deepening cell at (7, 26) to k=1
+         -> Deepening cell at (7, 25) to k=1
+         -> Deepening cell at (7, 24) to k=1
+         -> Deepening cell at (7, 23) to k=1
+         -> Deepening cell at (7, 22) to k=1
+         -> Deepening cell at (7, 21) to k=1
+         -> Deepening cell at (7, 20) to k=1
+         -> Deepening cell at (7, 18) to k=1
+         -> Deepening cell at (7, 19) to k=1
+         -> Deepening cell at (8, 19) to k=1
+         -> Deepening cell at (9, 19) to k=1
+         -> Deepening cell at (9, 20) to k=1
+         -> Deepening cell at (9, 21) to k=1
+         -> Deepening cell at (9, 22) to k=1
+         -> Deepening cell at (8, 22) to k=1
+         -> Deepening cell at (8, 21) to k=1
+         -> Deepening cell at (8, 20) to k=1
+         -> Deepening cell at (8, 23) to k=1
+         -> Deepening cell at (10, 17) to k=1
+         -> Deepening cell at (9, 18) to k=1
+         -> Deepening cell at (8, 18) to k=1
+         -> Deepening cell at (8, 17) to k=1
+       - Cannot deepen/shallow cell at (8, 17)
+         -> Deepening cell at (10, 16) to k=1
+         -> Deepening cell at (10, 15) to k=1
+         -> Deepening cell at (9, 15) to k=1
+         -> Deepening cell at (9, 16) to k=1
+         -> Deepening cell at (9, 17) to k=1
+         -> Deepening cell at (7, 17) to k=1
+         -> Deepening cell at (7, 16) to k=1
+         -> Deepening cell at (8, 16) to k=1
+         -> Deepening cell at (8, 15) to k=1
+         -> Deepening cell at (7, 15) to k=1
+         -> Deepening cell at (7, 14) to k=1
+         -> Deepening cell at (9, 14) to k=1
+         -> Deepening cell at (10, 14) to k=1
+         -> Deepening cell at (10, 13) to k=1
+       - Cannot deepen/shallow cell at (10, 13)
+         -> Deepening cell at (10, 10) to k=1
+         -> Deepening cell at (10, 12) to k=1
+         -> Deepening cell at (10, 11) to k=1
+         -> Deepening cell at (10, 9) to k=1
+         -> Deepening cell at (10, 8) to k=1
+         -> Deepening cell at (10, 7) to k=1
+         -> Deepening cell at (10, 6) to k=1
+         -> Deepening cell at (9, 6) to k=1
+         -> Deepening cell at (9, 5) to k=1
+         -> Deepening cell at (9, 3) to k=1
+         -> Deepening cell at (9, 2) to k=1
+         -> Deepening cell at (9, 1) to k=1
+         -> Deepening cell at (8, 1) to k=1
+         -> Deepening cell at (8, 2) to k=1
+         -> Deepening cell at (8, 3) to k=1
+         -> Deepening cell at (8, 4) to k=1
+         -> Deepening cell at (8, 5) to k=1
+         -> Deepening cell at (8, 6) to k=1
+         -> Deepening cell at (8, 7) to k=1
+         -> Deepening cell at (9, 7) to k=1
+         -> Deepening cell at (9, 8) to k=1
+         -> Deepening cell at (9, 9) to k=1
+         -> Deepening cell at (9, 10) to k=1
+         -> Deepening cell at (9, 11) to k=1
+         -> Deepening cell at (9, 12) to k=1
+         -> Deepening cell at (9, 13) to k=1
+         -> Deepening cell at (8, 13) to k=1
+         -> Deepening cell at (8, 14) to k=1
+         -> Deepening cell at (8, 12) to k=1
+         -> Deepening cell at (8, 11) to k=1
+         -> Deepening cell at (8, 10) to k=1
+         -> Deepening cell at (8, 9) to k=1
+         -> Deepening cell at (8, 8) to k=1
+         -> Deepening cell at (7, 8) to k=1
+         -> Deepening cell at (7, 9) to k=1
+         -> Deepening cell at (7, 10) to k=1
+         -> Deepening cell at (7, 11) to k=1
+         -> Deepening cell at (7, 12) to k=1
+         -> Deepening cell at (7, 13) to k=1
+         -> Deepening cell at (6, 13) to k=1
+         -> Deepening cell at (6, 12) to k=1
+         -> Deepening cell at (6, 11) to k=1
+         -> Deepening cell at (6, 10) to k=1
+         -> Deepening cell at (6, 9) to k=1
+         -> Deepening cell at (6, 8) to k=1
+         -> Deepening cell at (6, 7) to k=1
+         -> Deepening cell at (7, 7) to k=1
+         -> Deepening cell at (7, 6) to k=1
+         -> Deepening cell at (7, 5) to k=1
+         -> Deepening cell at (7, 4) to k=1
+         -> Deepening cell at (7, 3) to k=1
+         -> Deepening cell at (7, 2) to k=1
+         -> Deepening cell at (7, 1) to k=1
+         -> Deepening cell at (6, 1) to k=1
+         -> Deepening cell at (6, 2) to k=1
+         -> Deepening cell at (6, 3) to k=1
+         -> Deepening cell at (6, 4) to k=1
+         -> Deepening cell at (6, 5) to k=1
+         -> Deepening cell at (6, 6) to k=1
+         -> Deepening cell at (4, 6) to k=1
+         -> Deepening cell at (4, 5) to k=1
+         -> Deepening cell at (4, 4) to k=1
+         -> Deepening cell at (4, 3) to k=1
+         -> Deepening cell at (4, 2) to k=1
+         -> Deepening cell at (3, 2) to k=1
+         -> Deepening cell at (4, 1) to k=1
+         -> Deepening cell at (5, 1) to k=1
+         -> Deepening cell at (5, 2) to k=1
+       - Cannot deepen/shallow cell at (5, 2)
+         -> Deepening cell at (5, 3) to k=1
+         -> Deepening cell at (5, 4) to k=1
+         -> Deepening cell at (5, 5) to k=1
+         -> Deepening cell at (5, 6) to k=1
+         -> Deepening cell at (3, 6) to k=1
+         -> Deepening cell at (3, 5) to k=1
+         -> Deepening cell at (3, 4) to k=1
+         -> Deepening cell at (3, 3) to k=1
+       - Cannot deepen/shallow cell at (3, 2)
+         -> Deepening cell at (2, 1) to k=1
+       - Cannot deepen/shallow cell at (4, 1)
+         -> Deepening cell at (1, 1) to k=1
+         -> Deepening cell at (3, 1) to k=1
+         -> Deepening cell at (2, 2) to k=1
+         -> Deepening cell at (2, 3) to k=1
+         -> Deepening cell at (1, 3) to k=1
+         -> Deepening cell at (1, 2) to k=1
+         -> Deepening cell at (1, 4) to k=1
+         -> Deepening cell at (2, 4) to k=1
+         -> Deepening cell at (2, 5) to k=1
+         -> Deepening cell at (1, 5) to k=1
+         -> Deepening cell at (1, 6) to k=1
+         -> Deepening cell at (3, 7) to k=1
+         -> Deepening cell at (2, 6) to k=1
+         -> Deepening cell at (2, 7) to k=1
+         -> Deepening cell at (1, 7) to k=1
+         -> Deepening cell at (4, 7) to k=1
+       - Cannot deepen/shallow cell at (4, 7)
+         -> Deepening cell at (5, 7) to k=1
+         -> Deepening cell at (5, 8) to k=1
+         -> Deepening cell at (4, 8) to k=1
+         -> Deepening cell at (3, 8) to k=1
+         -> Deepening cell at (2, 8) to k=1
+         -> Deepening cell at (1, 8) to k=1
+         -> Deepening cell at (3, 9) to k=1
+       - Cannot deepen/shallow cell at (3, 9)
+         -> Deepening cell at (4, 9) to k=1
+         -> Deepening cell at (5, 9) to k=1
+         -> Deepening cell at (5, 10) to k=1
+         -> Deepening cell at (4, 10) to k=1
+         -> Deepening cell at (3, 10) to k=1
+         -> Deepening cell at (2, 10) to k=1
+         -> Deepening cell at (1, 9) to k=1
+         -> Deepening cell at (2, 9) to k=1
+         -> Deepening cell at (1, 10) to k=1
+         -> Deepening cell at (1, 11) to k=1
+         -> Deepening cell at (1, 12) to k=1
+         -> Deepening cell at (1, 13) to k=1
+         -> Deepening cell at (1, 14) to k=1
+         -> Deepening cell at (1, 15) to k=1
+         -> Deepening cell at (1, 16) to k=1
+         -> Deepening cell at (1, 18) to k=1
+       - Out of grid range
+       * Mask alteration complete
+       - User-editing complete.
+>  13. CALCULATING RUN-OFF AND GENERATE .k1 FILE ...
+       - .k1 file saved
+>  14. IDENTIFY ISLANDS ...
+       * found 1 land masses
+       * found 2 land masses
+       * found 3 land masses
+       * found 4 land masses
+>  15. UPDATING ISLANDS & PATHS ...
+       * updated find: 1 islands
+       * updated find: 2 islands
+       * updated find: N-S connected polar island
+       * total # true islands = 3
+       * Borders alteration procedure :
+         (1) left button to increase border #
+         (2) right button to decrease border # (0 == no border)
+         (3) middle button, or clickoutside the grid, to finish
+         [exit (middle button) if unsure WTF]
+       - Out of grid range
+       * Mask alteration complete
+>  16. GENERATING .paths FILE ...
+       * Creating raw path #1 ...
+       * Creating raw path #2 ...
+       * Creating raw path #3 ...
+       * Building path #2 ...
+         -> NE corner :: Skip path entry @ (30,19)
+         -> SE corner :: Add additional path entry @ (28,14)
+         -> NE corner :: Skip path entry @ (28,15)
+         -> SE corner :: Add additional path entry @ (27,15)
+       * Building path #3 ...
+         -> NE corner :: Skip path entry @ (28,13)
+         -> SE corner :: Add additional path entry @ (25,11)
+       - .paths file saved
+>  17. GENERATING .psiles FILE ...
+       - .psiles file saved
+>  20. CREATING WIND PRODUCTS ...
+       * No Northern gateway found.
+       * No Southern gateway found.
+       - Generated zonal wind products.
+>  21. LOADING ALBEDO DATA ...
+         (Nothing to load.)
+>  22. CREATING ALBEDO DATA ...
+       - Created generic zonal mean albedo profile.
+       - .albd.dat file saved
+>  23. GENERATING CONFIG FILE PARAMETER LINES ...
+       - .config file saved
+ 
+------------------------------------------------------------
+   Congratulations! SOMETHING was created ... 
+   ... hope it was what you wished for! :o)
+------------------------------------------------------------
+ 
