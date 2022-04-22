@@ -1,8 +1,6 @@
 #
 # --- CONFIGURATION UPDATE ---------------------------------------------------------
 #
-# GENIE MAIN
-ma_conv_kocn_korb=9999999
 # GOLDSTEIN
 go_sodaylen=64800.0                    #solar day length
 go_sidaylen=64560.0                    #sidereal day length
@@ -22,10 +20,7 @@ gs_scf=1.531013488769531300
 # PLASIM
 pl_nafter=115200                       #output frequency
 pl_psurf=101100.0                      #surface pressure
-pl_solar_day=64800.0                   #solar day length
-pl_siderial_day=64560.0                #sidereal day length
-pl_n_days_per_year=480                 #days per year
-pl_n_days_per_month=40                 #days per month
+pl_rotspd=1.33333333333333333333333333 #rotation speed factor
 pl_ngear=0                             #turn on(1)/off(0) gearing
 pl_ngear_multiple=10
 #pl_ndcycle=1                          #turn on daily insolation cycle
