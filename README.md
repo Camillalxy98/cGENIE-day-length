@@ -1,8 +1,8 @@
 # Parameterize day length in cGENIE
 ## Overview
-1. [genie-main/configs](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/genie-main/configs) contains the base-config that runs with the four user-configs in [genie-userconfigs](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/genie-userconfigs).
-2. [genie-forcings](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/genie-forcings) contains the forcing file required in the user-configs.
-3. Wind and albedo fields required for embm and biogem need to be imported from another atmosphere GCM run with corresponding changes in day length. Fields listed in the four user-configs are included in input folders.
+1. [genie-main/configs](https://github.com/Camillalxy98/cGENIE-day-length/tree/master/genie-main/configs) contains the base-config that runs with the four user-configs in [genie-userconfigs](https://github.com/Camillalxy98/cGENIE-day-length/tree/master/genie-userconfigs).
+2. [genie-forcings](https://github.com/Camillalxy98/cGENIE-day-length/tree/master/genie-forcings) contains the forcing file required in the user-configs.
+3. Wind and albedo fields required for embm and biogem need to be imported from another atmosphere GCM run with corresponding changes in day length. Fields listed in the four user-configs are included in [genie-embm/data/input](https://github.com/Camillalxy98/cGENIE-day-length/tree/master/genie-embm/data/input) and [genie-biogem/input](https://github.com/Camillalxy98/cGENIE-day-length/tree/master/genie-biogem/input).
 4. The main genie modules (goldstein, goldsteinseaice, embm and everything else in main) are copied in whole.
 5. Original files have a '_1' after their file names.
 ## Code modification
