@@ -2,9 +2,9 @@
 ## Overview
 1. [genie-main/configs](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/genie-main/configs) contains the base-config that runs with the four user-configs in [genie-userconfigs](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/genie-userconfigs).
 2. [genie-forcings](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/genie-forcings) contains the forcing file required in the user-configs.
-3. The main genie modules (goldstein, goldsteinseaice, embm and everything else in main) are copied in whole.
-4. Original files have a '_1' after their file names.
-5. Wind and albedo fields required for embm and biogem need to be imported from another atmosphere GCM run with corresponding changes in day length. Fields listed in the four user-configs are included in input folders.
+3. Wind and albedo fields required for embm and biogem need to be imported from another atmosphere GCM run with corresponding changes in day length. Fields listed in the four user-configs are included in input folders.
+4. The main genie modules (goldstein, goldsteinseaice, embm and everything else in main) are copied in whole.
+5. Original files have a '_1' after their file names.
 ## Code modification
 ### In genie-main
 In definition.xml, defined solar and siderial day lengths for goldstein, goldsteinseaice, and embm.
