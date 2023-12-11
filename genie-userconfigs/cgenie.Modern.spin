@@ -23,7 +23,7 @@ ea_taux_v='Modern.taux_v.dat'
 ea_tauy_v='Modern.tauy_v.dat'
 ea_adv_u='Modern.wvelx.dat'
 ea_adv_v='Modern.wvely.dat'
-#ea_par_albedo1d_name='Modern.albd.dat'
+ea_par_albedo1d_name='Modern.albd.dat'
 #
 # --- CLIMATE ---------------------------------------------------------
 # 
