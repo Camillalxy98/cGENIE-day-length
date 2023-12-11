@@ -2,58 +2,38 @@
 # --- CONFIGURATION UPDATE ---------------------------------------------------------
 #
 # GOLDSTEIN
-go_sodaylen=86400                      #solar day length
-go_sidaylen=86164                      #sidereal day length
-go_grid=2
-go_Tdata="igcm16_tempann.silo"
-go_Sdata="igcm16_saliann.silo"
+go_sodaylen=54000                      #solar day length
+go_sidaylen=53760                      #sidereal day length
+go_8=576                               #days per year
 go_ediffpow1=1
 go_ieos=1
 go_iediff=1
 go_ediff0=0.00001
+go_imld=1
+go_ctrl_diagmld=.TRUE.
 # GOLDSTEINSEAICE
-gs_sodaylen=86400                      #solar day length
-gs_sidaylen=86164                      #sidereal day length
-gs_grid=2
+gs_sodaylen=54000                      #solar day length
+gs_sidaylen=53760                      #sidereal day length
+gs_8=576                               #days per year
 gs_scf=1.5310134887695313
-# PLASIM
-pl_nafter=1152000                      #output frequency
-pl_psurf=101100.0                      #surface pressure
-pl_solar_day=86400.0                   #solar day length
-pl_siderial_day=86164.0                #sidereal day length
-pl_ngear=1
-pl_ngear_multiple=10
-pl_ndcycle=1
-pl_indir_name="../../cgenie.muffin/genie-plasim/data/input/T21_IGCM16"
-pl_albgmax=0.7
-pl_qthresh=0.1
-pl_scale_apm=0
-pl_albseamax=0.4
-pl_tdissd=0.012448584
-pl_tdissz=0.046267461
-pl_tdisst=1.03201731
-pl_tdissq=0.061880547
-pl_vdiff_lamm=12.95755067
-pl_tswr1=0.324030081
-pl_tswr2=0.032974609
-pl_acllwr=0.2
-pl_gsol0=1365.0
-pl_th2oc=0.023572382
-pl_rcritmin=0.948665442
-pl_gamma=0.007991045
-pl_k17=0.842488946
-pl_k18=1.204E-07
-pl_k26=2.41966E-09
-pl_k32=218.3556628
+# EMBM
+ea_sodaylen=54000                      #solar day length
+ea_sidaylen=53760                      #sidereal day length
+ea_8=576                               #days per year
+ea_taux_u='R15.taux_u.dat'
+ea_tauy_u='R15.tauy_u.dat'
+ea_taux_v='R15.taux_v.dat'
+ea_tauy_v='R15.tauy_v.dat'
+ea_adv_u='R15.wvelx.dat'
+ea_adv_v='R15.wvely.dat'
+ea_par_albedo1d_name='R15.albd.dat'
 #
 # --- CLIMATE ---------------------------------------------------------
 # 
-# set climate feedback
-pl_atchem_radfor=.TRUE.
 # solar constant
 ma_genie_solar_constant=1365.0
-# geothermal heat flux
-bg_par_Fgeothermal=0.075
+# set CO2-climate feedback
+ea_36=y
 #
 # --- BIOLOGICAL NEW PRODUCTION ---------------------------------------
 #
@@ -61,15 +41,11 @@ bg_par_bio_prodopt="NONE"
 #
 # --- DATA SAVING -----------------------------------------------------
 #
-bg_n_orb_pts_nmax=10000
-# save data at seasonal resolution (720/10/4=18)
-bg_par_data_save_slice_n=18
-# misc
+bg_par_infile_sig_name='save_timeseries_EVERY000100.dat'
+bg_par_infile_slice_name='save_timeslice_EVERY000100.dat'
 bg_par_data_save_level=9
 bg_ctrl_debug_lvl0=.true.
 ma_debug_loop=1
-bg_ctrl_data_save_slice_ocnatm=.true.
-bg_ctrl_data_save_slice_phys_ocn=.true.
 #
 # --- FORCINGS --------------------------------------------------------
 #
@@ -82,11 +58,17 @@ bg_par_atm_force_scale_val_10=7.0E-7
 bg_par_atm_force_scale_val_11=-60
 bg_par_atm_force_scale_val_12=0
 bg_ctrl_force_ocn_age=.true.
+# wind speed
+bg_ctrl_force_windspeed=.true.
+bg_par_windspeed_file='R15.windspeed.dat'
+# geothermal heat flux
+bg_ctrl_force_GOLDSTEInTS=.TRUE.
+bg_par_Fgeothermal=0.075
 #
 # --- INITIAL CONDITIONS ----------------------------------------------
 #
 # ATMOSPHERIC CHEMISTRY
-ac_atm_init_3=278.0E-06          # pCO2 [atm]
+ac_atm_init_3=280.0E-06          # pCO2 [atm]
 ac_atm_init_4=-6.5               # pCO2_13C [o/oo]
 ac_atm_init_6=0.2095             # pO2 [atm]
 ac_atm_init_10=7.0E-07           # pCH4 [atm]
