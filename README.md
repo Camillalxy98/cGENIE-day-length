@@ -1,12 +1,12 @@
-# PLASIM-cGENIE
+# Parameterize day length in cGENIE
 ## Overview
 1. [genie-main/configs](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/genie-main/configs) contains the base-config that runs with the two user-configs in [genie-userconfigs](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/genie-userconfigs).
 2. [genie-forcings](https://github.com/Camillalxy98/PLASIM-cGENIE/tree/master/genie-forcings) contains the forcing file required in the user-configs.
-3. The main genie modules (goldstein, goldsteinseaice, plasim and everything else in main) are copied in whole.
+3. The main genie modules (goldstein, goldsteinseaice, embm and everything else in main) are copied in whole.
 4. Original files have a '_1' after their file names.
-## Parameterize day length
+## Code modification
 ### In genie-main
-In definition.xml, defined solar and siderial day lengths for goldstein, goldsteinseaice.
+In definition.xml, defined solar and siderial day lengths for goldstein, goldsteinseaice, and embm.
 ```
 <param name="sodaylen">
     <value datatype="real">86400.0</value>
@@ -27,13 +27,26 @@ In definition.xml, defined solar and siderial day lengths for goldstein, goldste
     <description>length of sidereal day in goldsteinseaice</description>
 </param>
 ```
-### In genie-goldstein and genie-goldsteinseaice
-In initialise_goldstein.F and initialise_seaice.F, sodaylen or sidaylen are defined again to finish parameterization, which then replace hard-coded day length:
+```
+<param name="sodaylen">
+    <value datatype="real">86400.0</value>
+    <description>length of solar day in embm</description>
+</param>
+<param name="sidaylen">
+    <value datatype="real">86164.0</value>
+    <description>length of sidereal day in embm</description>
+</param>
+```
+### In genie-goldstein, genie-goldsteinseaice and genie-embm
+In initialise_goldstein.F, initialise_seaice.F and initialise_embm.F, sodaylen or sidaylen are defined again to finish parameterization, which then replace hard-coded day length (86400.0 or 24.0x60.0x60.0):
 ```
 NAMELIST /ini_gold_nml/conserv_per,ans,yearlen,nyear,sodaylen,sidaylen
 ```
 ```
 NAMELIST /ini_sic_nml/ans,yearlen,sodaylen,sidaylen,nyear,diffsic,scf,lout
+```
+```
+NAMELIST /ini_embm_nml/sodaylen,sidaylen,yearlen,nyear,ndta,scf
 ```
 ```
 c AY (05/05/04) : number of seconds per solar day
@@ -45,10 +58,8 @@ c AY (05/05/04) : number of seconds per sidereal day
 c     sidaylen = 86164.0
       if (debug_init) print*,'number of seconds per sidereal day'
       if (debug_init) print*,sidaylen
-
-      tv = sodaylen*yearlen/(nyear*tsc)
 ```
-In ocean.cmn and seaice.cmn, sodaylen and sidaylen are added:
+In ocean.cmn, seaice.cmn and embm.cmn, sodaylen and sidaylen are added:
 ```
 c AY (08/04/04) : seconds per solar day (necessary for GENIE)
       real sodaylen
@@ -58,9 +69,32 @@ c AY (08/04/04) : seconds per sidereal day (necessary for GENIE)
       real sidaylen
       common /ocn_sidaylen/sidaylen
 ```
-Replacement is also done with inm_netcdf.F, netcdf.F and surf_ocn_sic.F in goldstein; gold_seaice.F, inm_netcdf_sic.F, netcdf_sic.F, surflux_goldstein_seaice.F in goldsteinseaice.
+```
+c AY (08/04/04) : seconds per solar day (necessary for GENIE)
+      real sodaylen
+      common /sic_sodaylen/sodaylen
+
+c AY (08/04/04) : seconds per sidereal day (necessary for GENIE)
+      real sidaylen
+      common /sic_sidaylen/sidaylen
+```
+```
+c AY (08/04/04) : seconds per solar day (necessary for GENIE)
+      real sodaylen
+      common /embm_sodaylen/sodaylen
+
+c AY (08/04/04) : seconds per sidereal day (necessary for GENIE)
+      real sidaylen
+      common /embm_sidaylen/sidaylen
+```
+Replacement is also done with inm_netcdf.F, netcdf.F and surf_ocn_sic.F in goldstein; gold_seaice.F, inm_netcdf_sic.F, netcdf_sic.F, surflux_goldstein_seaice.F in goldsteinseaice; inm_netcdf_embm.F, netcdf_embm.F in embm.
+
+Siderial day length was implicitly coded or used solar day length value when calculating the following parameters:
+```
+initialise_goldstein.F: fsc = 4.0*pi/sidaylen; adrag = 1.0/(adrag*sidaylen*fsc)
+initialise_seaice.F: fsc = 4.0*pi/sidaylen
+initialise_embm.F: rsictscsf = dsc*dz(kmax)*rho0*cpo_ice/(17.5*sidaylen)
+```
 ## Run different day length
 ### In your configuration file
-Besides the day length parameters you just defined, you also need to change values for year length (go_yearlen & gs_yearlen) and rotation speed factor (pl_rotspd).
-PlaSim-cGENIE only supports certain day length (e.g., 12, 15, 18, 22.5).
-Don't turn on gearing, i.e., pl_ngear=0.
+Besides the day length parameters you just defined, you also need to change values for year length (go_yearlen, gs_yearlen, ea_yearlen).
