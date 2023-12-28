@@ -90,11 +90,10 @@ c AY (08/04/04) : seconds per sidereal day (necessary for GENIE)
 ```
 Replacement is also done with inm_netcdf.F, netcdf.F and surf_ocn_sic.F in goldstein; gold_seaice.F, inm_netcdf_sic.F, netcdf_sic.F, surflux_goldstein_seaice.F in goldsteinseaice; inm_netcdf_embm.F, netcdf_embm.F in embm.
 
-Sidereal day length was implicitly coded or used solar day length value when calculating the following parameters:
+Sidereal day length was implicitly coded or used solar day length value when calculating Coriolis related parameters:
 ```
 initialise_goldstein.F: fsc = 4.0*pi/sidaylen; adrag = 1.0/(adrag*sidaylen*fsc)
 initialise_seaice.F: fsc = 4.0*pi/sidaylen
-initialise_embm.F: rsictscsf = dsc*dz(kmax)*rho0*cpo_ice/(17.5*sidaylen)
 ```
 ## Run different day length
 ### In your configuration file
