@@ -1237,7 +1237,7 @@ c useful constant proportional to inverse timscale for surface freezing
 c     rsictscsf = ch_ice*u_tau_ice*rho0sea*cpo_ice
       rsictscsf = ch_ice*u_tau_ice*rho0*cpo_ice
       if (debug_init) print*,'rsictscsf = ',rsictscsf
-      rsictscsf = dsc*dz(kmax)*rho0*cpo_ice/(17.5*sidaylen)
+      rsictscsf = dsc*dz(kmax)*rho0*cpo_ice/(17.5*sodaylen)
       if (debug_init) print*,'rsictscsf = ',rsictscsf
 c minimum average sea-ice thickness over a grid cell
       hmin = 0.01
