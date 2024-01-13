@@ -428,12 +428,12 @@ c     New or continuing run
       if (debug_init) print*,'new or continuing run ?'
       if (debug_init) print*,ans
 
-c AY (05/05/04) : number of seconds per solar day
+c CL (01/15/24) : number of seconds per solar day
 c     sodaylen = 86400.0
       if (debug_init) print*,'number of seconds per solar day'
       if (debug_init) print*,sodaylen
 
-c AY (05/05/04) : number of seconds per sidereal day
+c CL (01/15/24) : number of seconds per sidereal day
 c     sidaylen = 86164.0
       if (debug_init) print*,'number of seconds per sidereal day'
       if (debug_init) print*,sidaylen
