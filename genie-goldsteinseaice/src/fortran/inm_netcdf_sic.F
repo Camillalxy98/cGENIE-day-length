@@ -27,7 +27,7 @@ c     For netcdf...
 c AY (06/10/04) : extra variables for printing out average model properties
       integer i,j,l,icell
       real    tmp_val(4)
-
+c CL (01/15/24) : replaced hard-coded solar day length
       timestep=sodaylen*yearlen/real(nyear)
 
       fnamein=trim(filenetin)
@@ -67,7 +67,7 @@ c AY (06/10/04) : extra variables for printing out average model properties
 
          day_rest=iday
          ioffset_rest=mod(ioffset_rest,nint(yearlen))
-
+c CL (01/15/24) : replaced hard-coded solar day length
       day_rest=day_rest+timestep/sodaylen
 c     This bit so that we don't get too far out in our count....
 c     Anchor to a day if we start drifting.
