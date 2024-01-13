@@ -248,6 +248,8 @@ c dimensional scale values
       dsc = 5e3
       gsc = 9.81
       rh0sc = 1e3
+
+c CL (01/15/24) : used sidereal day length for Coriolis effect scaling factor
       fsc = 4*pi/sidaylen
       rhosc = rh0sc*fsc*usc*rsc/gsc/dsc
       cpsc = 3981.1
