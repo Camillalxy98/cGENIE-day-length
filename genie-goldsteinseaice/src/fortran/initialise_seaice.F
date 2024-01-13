@@ -223,12 +223,12 @@ c     yearlen = 365.25
       if (debug_init) print*,'number of days per GOLDSTEIN sea-ice year'
       if (debug_init) print*,yearlen
 
-c AY (01/02/20) : number of seconds per solar day
+c CL (01/15/24) : number of seconds per solar day
 c     sodaylen = 86400
       if (debug_init) print*,'number of seconds per solar day'
       if (debug_init) print*,sodaylen
 
-c AY (01/02/20) : number of seconds per sidereal day
+c CL (01/15/24) : number of seconds per sidereal day
 c     sidaylen = 86164
       if (debug_init) print*,'number of seconds per sidereal day'
       if (debug_init) print*,sidaylen
