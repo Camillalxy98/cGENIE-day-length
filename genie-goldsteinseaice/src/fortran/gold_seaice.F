@@ -313,6 +313,7 @@ c The energy bit has units of J, relative to an initial value.
 c THE ENERGY BIT (HERE AND IN SURF_OCN_SIC) IS WELL-DODGY AND
 c IS A COMPLETE FIX.  SEE DJL FOR MORE INFO.
        if (mod(istep,conserv_per).eq.0) then
+c CL (01/15/24) : replaced hard-coded solar day length
        tv = sodaylen*yearlen/(nyear*tsc)
        vsc = dphi*rsc*rsc
        tot_energy=0.0
