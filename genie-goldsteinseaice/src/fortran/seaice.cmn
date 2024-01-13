@@ -62,11 +62,11 @@ c AY (08/04/04) : days per year (necessary for GENIE)
       real yearlen
       common /sic_yearlen/yearlen
 
-c AY (08/04/04) : seconds per solar day (necessary for GENIE)
+c CL (01/15/24) : seconds per solar day (necessary for GENIE)
       real sodaylen
       common /sic_sodaylen/sodaylen
 
-c AY (08/04/04) : seconds per sidereal day (necessary for GENIE)
+c CL (01/15/24) : seconds per sidereal day (necessary for GENIE)
       real sidaylen
       common /sic_sidaylen/sidaylen
 
