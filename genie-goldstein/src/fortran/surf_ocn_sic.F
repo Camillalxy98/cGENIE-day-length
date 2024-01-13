@@ -214,6 +214,7 @@ c+DJL First of all, update seaice energy from the previous timestep...
             endif
          enddo
       enddo
+c CL (01/15/24) : replaced hard-coded solar day length
       diff_latent=diff_latent*sodaylen*yearlen*rsc*rsc*4.0*pi/
      :               real(nyear)
       diff_sensible=diff_sensible*sodaylen*yearlen*rsc*rsc*4.0*pi/
@@ -776,6 +777,7 @@ c       to seaice energy.
             endif
          enddo
       enddo
+c CL (01/15/24) : replaced hard-coded solar day length
       diff_netsolar=diff_netsolar*sodaylen*yearlen*rsc*rsc*4.0*pi/
      :               real(nyear)
       diff_netlong=diff_netlong*sodaylen*yearlen*rsc*rsc*4.0*pi/
