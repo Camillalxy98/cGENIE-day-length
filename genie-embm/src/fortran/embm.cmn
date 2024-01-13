@@ -160,11 +160,11 @@ c adjustable freshwater forcing parameters
       real extra0,range0,extra1a,extra1b,extra1c
       common /embm_fwf_real/ extra0,range0,extra1a,extra1b,extra1c
 
-c AY (08/04/04) : seconds per solar day (necessary for GENIE)
+c CL (01/15/24) : seconds per solar day (necessary for GENIE)
       real sodaylen
       common /embm_sodaylen/sodaylen
 
-c AY (08/04/04) : seconds per sidereal day (necessary for GENIE)
+c CL (01/15/24) : seconds per sidereal day (necessary for GENIE)
       real sidaylen
       common /embm_sidaylen/sidaylen
 
