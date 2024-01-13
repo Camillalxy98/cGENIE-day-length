@@ -50,41 +50,41 @@ NAMELIST /ini_sic_nml/ans,yearlen,sodaylen,sidaylen,nyear,diffsic,scf,lout
 NAMELIST /ini_embm_nml/sodaylen,sidaylen,yearlen,nyear,ndta,scf
 ```
 ```
-c AY (05/05/04) : number of seconds per solar day
+c CL (01/15/24) : number of seconds per solar day
 c     sodaylen = 86400.0
       if (debug_init) print*,'number of seconds per solar day'
       if (debug_init) print*,sodaylen
 
-c AY (05/05/04) : number of seconds per sidereal day
+c CL (01/15/24) : number of seconds per sidereal day
 c     sidaylen = 86164.0
       if (debug_init) print*,'number of seconds per sidereal day'
       if (debug_init) print*,sidaylen
 ```
 In ocean.cmn, seaice.cmn and embm.cmn, sodaylen and sidaylen are added:
 ```
-c AY (08/04/04) : seconds per solar day (necessary for GENIE)
+c CL (01/15/24) : seconds per solar day (necessary for GENIE)
       real sodaylen
       common /ocn_sodaylen/sodaylen
 
-c AY (08/04/04) : seconds per sidereal day (necessary for GENIE)
+c CL (01/15/24) : seconds per sidereal day (necessary for GENIE)
       real sidaylen
       common /ocn_sidaylen/sidaylen
 ```
 ```
-c AY (08/04/04) : seconds per solar day (necessary for GENIE)
+c CL (01/15/24) : seconds per solar day (necessary for GENIE)
       real sodaylen
       common /sic_sodaylen/sodaylen
 
-c AY (08/04/04) : seconds per sidereal day (necessary for GENIE)
+c CL (01/15/24) : seconds per sidereal day (necessary for GENIE)
       real sidaylen
       common /sic_sidaylen/sidaylen
 ```
 ```
-c AY (08/04/04) : seconds per solar day (necessary for GENIE)
+c CL (01/15/24) : seconds per solar day (necessary for GENIE)
       real sodaylen
       common /embm_sodaylen/sodaylen
 
-c AY (08/04/04) : seconds per sidereal day (necessary for GENIE)
+c CL (01/15/24) : seconds per sidereal day (necessary for GENIE)
       real sidaylen
       common /embm_sidaylen/sidaylen
 ```
