@@ -39,7 +39,7 @@ c AY (17/03/04) : extra declarations
       integer iyear, imonth
 c
 c AY (17/03/04) : alon1, etc. now calculated in initialise_ocean.F
-c
+c CL (01/15/24) : replaced hard-coded solar day length
       day=istep*dtsic*tsc/sodaylen
 c AY (17/03/04) : 365.25 days per GOLDSTEIN year (not 360.0)
 c AY (23/03/04) : small constant added to day calculation for round-off
