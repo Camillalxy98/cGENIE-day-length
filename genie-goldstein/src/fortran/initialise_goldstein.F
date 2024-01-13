@@ -366,6 +366,7 @@ c dimensional scale values
       rsc = 6.37e6
 c      dsc = 5e3
       dsc = par_dsc
+c CL (01/15/24) : used sidereal day length for Coriolis effect scaling factor
       fsc = 4*pi/sidaylen
       gsc = 9.81
       rh0sc = 1e3
@@ -1102,6 +1103,7 @@ c drgf per gridpoint close to equator and in regions of
 c shallow water (k1>kmxdrg) ie land in the case kmxdrg=kmax
 c jeb = 1/2 width of equatorial region of maximum drag
 
+c CL (01/15/24) : used sidereal day length for inverse of frictional drag
       adrag = 1.0/(adrag*sidaylen*fsc)
 c cross equator need * 4 if drag is constant ie if drgf=1
       drgf = 3.0
